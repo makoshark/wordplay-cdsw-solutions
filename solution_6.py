@@ -8,23 +8,27 @@ import scrabble
 
 new_words = []
 for word in scrabble.wordlist:
-    local_chars = {}
-    seen_before = False
+    unique_letters = []
+    duplicated_letters = False
     for character in word:
         # have we seen this character before?
-        if character in local_chars:
-            seen_before = True
-            break # Exit the loop early, since we've found a collision.
-        # store the character
-        local_chars[character] = 1
+        if character in unique_letters:
+            duplicated_letters = True
+        else:
+            # store the character
+            unique_letters.append(character)
 
-    if not seen_before:
+    if not duplicated_letters:
         new_words.append(word)
 
 # Reuse my code for longest word
-longest_so_far = ''
+longest_so_far = []
+longest_length = 0
 for word in new_words:
-    if len(word) > len(longest_so_far):
-        longest_so_far = word
+    if len(word) > longest_length:
+        longest_so_far = [word]
+        longest_length = len(word)
+    elif len(word) == longest_length:
+        longest_so_far.append(word)
 
 print(longest_so_far)
