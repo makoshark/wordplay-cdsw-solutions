@@ -42,3 +42,16 @@ b: bezzazzes, 47
 e: embezzlements, 37
 d: decitizenizing, 36
 .....</pre>
+
+
+### Wordplay Project Ideas
+
+The [Wordplay wiki page](http://wiki.communitydata.cc/Wordplay) also include
+several ideas for projects. These are listed as idea\_1.py, etc. in the
+directory:
+
+1. Find and print the words that start with "ee".
+2. Find and print the words that end in "mt". How about "gry"?
+3. Find and print the longest word that has no vowels.
+4. Find an print the words that contain 4 or more 'l's.
+5. Find and print the words that have all 5 vowels in alphabetical order.
